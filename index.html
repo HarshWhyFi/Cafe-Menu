@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #000; /* Set background to black */
+            color: #fff; /* Change text color to white for readability */
+            line-height: 1.6;
+        }
+
+        header {
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border-top: 4px solid #6a82fb;
+            margin-top: 10px;
+            background-color: #000; /* Set main section background to black */
+        }
+
+        section {
+            margin-bottom: 40px;
+            width: 100%;
+            border: 4px solid Bisque; /* Set bold Bisque border */
+            border-radius: 12px;
+            padding: 20px;
+            background-color: #000; /* Set section background to black */
+            box-shadow: 0 0 15px Bisque; /* Add Bisque shadow effect */
+        }
+
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .menu-item {
+            background-color: #000; /* Set menu item background to black */
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* White shadow */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.8); /* Stronger white shadow on hover */
+        }
+
+        .item-content {
+            padding: 10px;
+            text-align: center;
+            border-top: 4px solid #6a82fb;
+            background-color: #000; /* Keep content background black */
+            color: #fff; /* Change text color to white for readability */
+        }
+
+        .item-image img {
+            width: 100%;
+            height: auto;
+            border-bottom: 4px solid #6a82fb;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #6a82fb;
+            font-size: 2.5em;
+            border: 2px solid #007BFF;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #000; /* Set heading background to black */
+        }
+
+        h3 {
+            margin-bottom: 5px;
+            font-size: 1.4em;
+            color: #fc5c7d;
+        }
+
+        p {
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .price {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #6a82fb;
+            font-size: 1.2em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px 0;
+            background: #000; /* Set footer background to black */
+            color: #fff; /* Set footer text color to white */
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3sWQ2_OgymtKEe6TBce75OeewKoR5Vmicgg&usqp=CAU" alt="Café Header">
+    </header>
+
+    <main>
+        <section>
+            <h2>Beverages</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Coffee">
+                    </div>
+                    <div class="item-content">
+                        <h3>Coffee</h3>
+                        <p>Rich and aromatic coffee brewed to perfection.</p>
+                        <span class="price">$3.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Tea">
+                    </div>
+                    <div class="item-content">
+                        <h3>Tea</h3>
+                        <p>Refreshing tea with a variety of flavors.</p>
+                        <span class="price">$2.50</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Juice">
+                    </div>
+                    <div class="item-content">
+                        <h3>Fruit Juice</h3>
+                        <p>Freshly squeezed fruit juices.</p>
+                        <span class="price">$3.50</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Smoothie">
+                    </div>
+                    <div class="item-content">
+                        <h3>Smoothie</h3>
+                        <p>Delicious smoothies made with fresh fruits.</p>
+                        <span class="price">$4.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Soda">
+                    </div>
+                    <div class="item-content">
+                        <h3>Soda</h3>
+                        <p>Chilled soda in various flavors.</p>
+                        <span class="price">$2.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Appetizers</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Garlic Bread">
+                    </div>
+                    <div class="item-content">
+                        <h3>Garlic Bread</h3>
+                        <p>Crispy garlic bread with a buttery taste.</p>
+                        <span class="price">$4.50</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Mozzarella Sticks">
+                    </div>
+                    <div class="item-content">
+                        <h3>Mozzarella Sticks</h3>
+                        <p>Cheesy mozzarella sticks with marinara dip.</p>
+                        <span class="price">$5.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Nachos">
+                    </div>
+                    <div class="item-content">
+                        <h3>Nachos</h3>
+                        <p>Crispy nachos served with salsa.</p>
+                        <span class="price">$4.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Spring Rolls">
+                    </div>
+                    <div class="item-content">
+                        <h3>Spring Rolls</h3>
+                        <p>Crispy spring rolls filled with vegetables.</p>
+                        <span class="price">$5.50</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Bruschetta">
+                    </div>
+                    <div class="item-content">
+                        <h3>Bruschetta</h3>
+                        <p>Toasted bread topped with tomatoes and basil.</p>
+                        <span class="price">$4.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Desserts</h2>
+            <div class="menu">
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Chocolate Cake">
+                    </div>
+                    <div class="item-content">
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich chocolate cake with layers of cream.</p>
+                        <span class="price">$5.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Ice Cream">
+                    </div>
+                    <div class="item-content">
+                        <h3>Ice Cream</h3>
+                        <p>Refreshing ice cream in various flavors.</p>
+                        <span class="price">$3.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Fruit Tart">
+                    </div>
+                    <div class="item-content">
+                        <h3>Fruit Tart</h3>
+                        <p>Delicious tart filled with fresh fruits.</p>
+                        <span class="price">$4.50</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Cheesecake">
+                    </div>
+                    <div class="item-content">
+                        <h3>Cheesecake</h3>
+                        <p>Creamy cheesecake with a graham cracker crust.</p>
+                        <span class="price">$6.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="https://content.jdmagicbox.com/v2/comp/bangalore/x2/080pxx80.xx80.200312210548.h6x2/catalogue/ovenstory-pizza-new-bel-road-bangalore-pizza-outlets-bvfzubw84t.jpg" alt="Brownie">
+                    </div>
+                    <div class="item-content">
+                        <h3>Brownie</h3>
+                        <p>Rich and fudgy brownie topped with nuts.</p>
+                        <span class="price">$4.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Harsh Sharma. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
